@@ -47,6 +47,8 @@ namespace DAL.CAT_MANT
         public string sNombreTabla { get => _sNombreTabla; set => _sNombreTabla = value; }
         public bool bEstAX { get => _bEstAX; set => _bEstAX = value; }
         public int iResultado { get => _iResultado; set => _iResultado = value; }
+        public string SMessage { get => _sMessage; set => _sMessage = value; }
+        public bool BIsValid { get => _bIsValid; set => _bIsValid = value; }
 
         #endregion
     }

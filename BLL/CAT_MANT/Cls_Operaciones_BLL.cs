@@ -72,8 +72,8 @@ namespace BLL.CAT_MANT
 
             Obj_BD_BLL.Crear_DT_Parametros(ref Obj_BD_DAL);
             Obj_BD_DAL.Dt_Parametros.Rows.Add("@Resultado", "1", Obj_Operaciones_DAL.iResultado);
-            Obj_BD_DAL.Dt_Parametros.Rows.Add("@Mensaje", "4", Obj_Operaciones_DAL.iResultado);
-            Obj_BD_DAL.Dt_Parametros.Rows.Add("@EsValido", "3", Obj_Operaciones_DAL.iResultado);
+            Obj_BD_DAL.Dt_Parametros.Rows.Add("@Mensaje", "4", Obj_Operaciones_DAL.SMessage);
+            Obj_BD_DAL.Dt_Parametros.Rows.Add("@EsValido", "3", Obj_Operaciones_DAL.BIsValid);
 
 
 
@@ -110,8 +110,8 @@ namespace BLL.CAT_MANT
 
             Obj_BD_BLL.Crear_DT_Parametros(ref Obj_BD_DAL);
             Obj_BD_DAL.Dt_Parametros.Rows.Add("@Resultado", "1", Obj_Operaciones_DAL.iResultado);
-            Obj_BD_DAL.Dt_Parametros.Rows.Add("@Mensaje", "4", Obj_Operaciones_DAL.iResultado);
-            Obj_BD_DAL.Dt_Parametros.Rows.Add("@EsValido", "3", Obj_Operaciones_DAL.iResultado);
+            Obj_BD_DAL.Dt_Parametros.Rows.Add("@Mensaje", "4", Obj_Operaciones_DAL.SMessage);
+            Obj_BD_DAL.Dt_Parametros.Rows.Add("@EsValido", "3", Obj_Operaciones_DAL.BIsValid);
 
 
             Obj_BD_BLL.Exec_NonQuery(ref Obj_BD_DAL);
@@ -146,6 +146,8 @@ namespace BLL.CAT_MANT
 
             Obj_BD_BLL.Crear_DT_Parametros(ref Obj_BD_DAL);
             Obj_BD_DAL.Dt_Parametros.Rows.Add("@Resutado", "1", Obj_Operaciones_DAL.iResultado);
+            Obj_BD_DAL.Dt_Parametros.Rows.Add("@Mensaje", "4", Obj_Operaciones_DAL.SMessage);
+            Obj_BD_DAL.Dt_Parametros.Rows.Add("@EsValido", "3", Obj_Operaciones_DAL.BIsValid);
 
 
 
