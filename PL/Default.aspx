@@ -31,7 +31,10 @@
         <asp:Button ID="btnMas" runat="server" Text="+" Width="100px" />
         <asp:Button ID="btnIgual" runat="server" Text="=" Width="100px" OnClick="btnIgual_Click" />
         <br />
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a><asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1">
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+        </p>
     </div>
 
     <div class="row">
