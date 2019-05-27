@@ -16,7 +16,7 @@ namespace BLL.BD
         {
             try
             {
-                obj_BD_DAL.sCadena = ConfigurationManager.ConnectionStrings["WIN_AUT"].ToString();
+                obj_BD_DAL.sCadena = ConfigurationManager.ConnectionStrings["CalculadoraConnectionString"].ToString();
 
                 obj_BD_DAL.SQL_CNX = new SqlConnection(obj_BD_DAL.sCadena);
 
@@ -177,7 +177,7 @@ namespace BLL.BD
                                 case "3":
                                     {
                                         obj_BD_DAL.SQL_CMD.Parameters.Add(dr[0].ToString(),
-                                                                                       SqlDbType.Binary).Value = dr[2].ToString();
+                                                                                       SqlDbType.Bit).Value = dr[2].ToString();
                                         break;
                                     }
                                 case "4":

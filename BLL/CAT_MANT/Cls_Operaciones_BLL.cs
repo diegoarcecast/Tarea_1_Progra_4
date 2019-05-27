@@ -35,7 +35,7 @@ namespace BLL.CAT_MANT
             }
         }
 
-        public void Filtrar_Estados(ref Cls_Operaciones_DAL Obj_Operaciones_DAL, string sFiltro)
+        public void Filtrar_Operaciones(ref Cls_Operaciones_DAL Obj_Operaciones_DAL, string sFiltro)
         {
             Cls_BD_BLL Obj_BD_BLL = new Cls_BD_BLL();
             Cls_BD_DAL Obj_BD_DAL = new Cls_BD_DAL();
@@ -62,7 +62,7 @@ namespace BLL.CAT_MANT
             }
         }
 
-        public void Insertar_Estados(ref Cls_Operaciones_DAL Obj_Operaciones_DAL)
+        public void Insertar_Operaciones(ref Cls_Operaciones_DAL Obj_Operaciones_DAL)
         {
             Cls_BD_BLL Obj_BD_BLL = new Cls_BD_BLL();
             Cls_BD_DAL Obj_BD_DAL = new Cls_BD_DAL();
@@ -99,7 +99,7 @@ namespace BLL.CAT_MANT
             }
         }
 
-        public void Modificar_Estados(ref Cls_Operaciones_DAL Obj_Operaciones_DAL)
+        public void Modificar_Operaciones(ref Cls_Operaciones_DAL Obj_Operaciones_DAL)
         {
 
             Cls_BD_BLL Obj_BD_BLL = new Cls_BD_BLL();
@@ -134,7 +134,7 @@ namespace BLL.CAT_MANT
             }
         }
 
-        public void Eliminar_Estados(ref Cls_Operaciones_DAL Obj_Operaciones_DAL)
+        public void Eliminar_Operaciones(ref Cls_Operaciones_DAL Obj_Operaciones_DAL)
         {
 
 

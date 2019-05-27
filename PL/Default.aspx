@@ -13,7 +13,7 @@
         <asp:Button ID="btn2" runat="server" Text="2" Width="100px" />
         <asp:Button ID="btn3" runat="server" Text="3" Width="100px" />
         <asp:Button ID="btndiv" runat="server" Text="/" Width="100px" />
-        <asp:Button ID="btnData" runat="server" Text="DATA" Width="100px" />
+        <asp:Button ID="btnData" runat="server" Text="DATA" Width="100px" OnClick="btnData_Click" />
 
         <br />
         <asp:Button ID="btn4" runat="server" Text="4" Width="100px" />
@@ -31,9 +31,25 @@
         <asp:Button ID="btnMas" runat="server" Text="+" Width="100px" />
         <asp:Button ID="btnIgual" runat="server" Text="=" Width="100px" OnClick="btnIgual_Click" />
         <br />
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a><asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1">
+        <p><asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Visible="False">
+            <AlternatingRowStyle BackColor="White" />
+            <Columns>
+                <asp:BoundField DataField="Resultado" HeaderText="Resultado" SortExpression="Resultado" />
+                <asp:BoundField DataField="Mensaje" HeaderText="Mensaje" SortExpression="Mensaje" />
+                <asp:CheckBoxField DataField="EsValido" HeaderText="EsValido" SortExpression="EsValido" />
+            </Columns>
+            <EditRowStyle BackColor="#7C6F57" />
+            <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#E3EAEB" />
+            <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#F8FAFA" />
+            <SortedAscendingHeaderStyle BackColor="#246B61" />
+            <SortedDescendingCellStyle BackColor="#D4DFE1" />
+            <SortedDescendingHeaderStyle BackColor="#15524A" />
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CalculadoraConnectionString %>" SelectCommand="SELECT * FROM [Resultados]"></asp:SqlDataSource>
         </p>
     </div>
 
