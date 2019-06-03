@@ -1,11 +1,12 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="PL._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
+   
     <div class="jumbotron">
-        <h1>ASP.NET</h1>
+        <h1>Ejemplo de una calculadora</h1>
+        <div class="jumbotron" style="width: 80%; margin: 0 auto" >
         <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <asp:TextBox ID="TextBox1" runat="server" Width="400px" OnTextChanged="TextBox1_TextChanged" Enabled="False"></asp:TextBox>
+        <asp:TextBox ID="TextBox1" runat="server" Width="492px" OnTextChanged="TextBox1_TextChanged" Enabled="False"></asp:TextBox>
         <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar" Width="100px" OnClick="btnLimpiar_Click" />
         <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox1" Display="Dynamic" ErrorMessage="Error de Sintaxis" OnDataBinding="TextBox1_TextChanged" ValidationExpression="^[-+]?[0-9]+([-+*/]+[-+]?[0-9]+)*$" EnableClientScript="False"></asp:RegularExpressionValidator>
         <br />
@@ -26,62 +27,29 @@
         <asp:Button ID="btn9" runat="server" Text="9" Width="100px" OnClick="btn9_Click" />
         <asp:Button ID="btnMenos" runat="server" Text="-" Width="100px" OnClick="btnMenos_Click" />
         <br />
-        <asp:Button ID="btn0" runat="server" Text="0" Width="200px" OnClick="btn0_Click" />
+        <asp:Button ID="btn0" runat="server" Text="0" Width="204px" OnClick="btn0_Click" />
         <asp:Button ID="btnPunto" runat="server" Text="&lt;---" Width="100px" OnClick="btnPunto_Click" />
         <asp:Button ID="btnMas" runat="server" Text="+" Width="100px" OnClick="btnMas_Click" />
         <asp:Button ID="btnIgual" runat="server" Text="=" Width="100px" OnClick="btnIgual_Click" />
         <br />
-        <p><asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Visible="False">
-            <AlternatingRowStyle BackColor="White" />
+            </div>
+        <div class="jumbotron" style="width: 50%; margin: 0 auto" >
+        <p><asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" Visible="False" AllowPaging="True">
             <Columns>
                 <asp:BoundField DataField="Resultado" HeaderText="Resultado" SortExpression="Resultado" />
                 <asp:BoundField DataField="Mensaje" HeaderText="Mensaje" SortExpression="Mensaje" />
                 <asp:CheckBoxField DataField="EsValido" HeaderText="EsValido" SortExpression="EsValido" />
             </Columns>
-            <EditRowStyle BackColor="#7C6F57" />
-            <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-            <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-            <RowStyle BackColor="#E3EAEB" />
-            <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
-            <SortedAscendingCellStyle BackColor="#F8FAFA" />
-            <SortedAscendingHeaderStyle BackColor="#246B61" />
-            <SortedDescendingCellStyle BackColor="#D4DFE1" />
-            <SortedDescendingHeaderStyle BackColor="#15524A" />
+            <HeaderStyle CssClass="header" />
+            <PagerStyle CssClass="pager" />
+            <RowStyle CssClass="rows" />
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CalculadoraConnectionString %>" SelectCommand="SELECT * FROM [Resultados]"></asp:SqlDataSource>
         </p>
+            </div>
     </div>
 
     <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
-        </div>
     </div>
 
 </asp:Content>
